@@ -1,0 +1,1234 @@
+
+
+
+.centrar-contenido-1{
+	width: 1080px;
+	margin: 0 auto;
+}
+
+.centrar-contenido-2{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.box-video{
+	width: 348px;
+	height: 200px;
+	margin-left: 1px;
+	margin-right: 1px;
+	margin-bottom: 2px;
+	float: left;
+	list-style:none;
+	-webkit-transition: opacity 1s; /* For Safari 3.1 to 6.0 */
+    transition: opacity 1s;
+    opacity: 0.65;
+}
+
+.box-video:hover {
+    opacity: 1;
+}
+
+.top-margin-tags{
+	margin-top: 5px;
+}
+
+.list-video{
+	margin-top: 100px;
+}
+
+.video-image{
+	width: 100%;
+	height: 160px;
+	float: left;
+	border-bottom: 1px black;
+	border-bottom-style: solid;
+	//background-color: red;
+	opacity: 0.7;
+}
+
+.list-tags{
+	width: 100%;
+	height: 40px;
+	opacity: 0.5;
+	background-color: grey;
+
+}
+.spacing-li li{
+	margin: 1px;
+	position: relative;
+}
+
+.addvideo{
+	width: 250px;
+	height: 200px;
+	margin-left: 49px;
+}
+
+.change-opacity{
+	opacity: 0.7;
+}
+
+.change-opacity:hover{
+	opacity: 1;
+}
+
+
+@media (min-width:320px) and (max-width: 480px) { 
+	.centrar-contenido-1{
+		width: 100%;
+		margin: 0 auto;
+	}
+
+}
+
+@media (min-width:320px) and (max-width: 1080px) {
+	.centrar-contenido-1{
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.mi_tabla{
+	width: 33%;
+}
+
+.video_match{
+	width: 60px;
+}
+
+.teamschampionship{
+	height: auto;
+}
+
+#selectteams{
+	height: 300px;
+}
+
+#selectteams option{
+	height: 25px;
+	width: auto;
+	padding: 3px;
+}
+
+#selectteams option:hover{
+	border-bottom: 1px solid grey;
+	background-color: #CFD0FC;
+	padding-left: 10px;
+}
+
+#form_parings{
+	margin-bottom: 50px;
+}
+
+
+.error {
+	font-size: 12px;
+	font-family: Helvetica;
+	color: red;
+}
+
+/* Imagen descriptiva de video */
+
+
+.nombre-video{
+	position: absolute;
+    left: 0; 
+    width: 50%; 
+}
+
+
+div.relative {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*background-color: red;*/
+}
+
+div.parteam {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 80%;
+    height: 40px;
+    background-color: black;
+    margin-top: 2px;
+    -webkit-transition: opacity 0.5s;
+}
+
+div.championshipmatch {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 60%;
+    height: 30px;
+    background-color: black;
+    margin-top: 2px;
+    -webkit-transition: opacity 0.5s;
+}
+
+div.time {
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    width: 50px;
+    height: 30px;
+    background-color: black;
+    -webkit-transition: opacity 0.5s;
+}
+
+.duration {
+    width: 100%;
+    height: 100%;
+    margin-left: 20%;
+    margin-top: 15%;
+    font-size: 12px;
+    font-family: Helvetica;
+	color: white;
+}
+
+h1.teams{
+	width: 100%;
+    height: 100%;
+	font-size: 20px;
+	font-family: Helvetica;
+	color: white;
+	margin-left: 1px;
+	padding: 0;
+	float: left;
+}
+
+h2.championship{
+	width: 100%;
+    height: 100%;
+	font-size: 15px;
+	font-family: Helvetica;
+	color: #FFF;
+	top: 0;
+	margin-left: 1px;
+	margin: 0;
+}
+
+.match-video{
+	width: 100%;
+	height: 100%;
+}
+
+.match{
+	width: 100%;
+	height: 100%;
+}
+
+.info-video{
+    opacity: 0.75;
+    -webkit-transition: opacity 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: opacity 0.5s;
+}
+
+.info-video:hover{
+	opacity: 0.90;
+}
+
+	
+/*estilo video web*/
+
+.campeonato{
+	font-size: 20px;
+}
+
+.partido{
+	font-size: 25px;
+	padding-left: 50px;
+}
+
+.titulo{
+	width: 100%;
+	height: 50px;
+	background-color: #DC143C;
+	margin-bottom: 10px;
+	padding: 0;
+}
+
+.titulo h1{
+	margin-left: 20px;
+	font-style: helvetica;
+	font-size: 25px;
+	padding-top: 15px;
+}
+
+.contenido-video{
+	width: 1080px;
+	height: 550px;
+	margin-bottom: 50px;
+	border: solid 2px grey;
+	border-radius: 15px;
+	padding-top: 30px;
+}
+
+.parte-izda{
+	float: left;
+	border: solid 1px grey;
+}
+
+.table-play-to-play{
+	width: 1080px;
+	height: auto;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+.box-video-play{
+	width: 700px;
+	height: 396px;
+	border: solid 2px grey;
+	margin-left: 10px;
+	margin-top: 10px;
+	padding: 0;
+}
+
+.options-play{
+	width: 330px;
+	height: 400px;
+	float: right;
+	margin-right: 10px;
+	margin-top: 10px;
+	padding: 0;
+}
+
+.video-box-show{
+	width: 696px;
+	height: 400px;
+	margin:0;
+	float: left;
+	position:absolute;
+}
+
+/********************** Interruptor ON-OFF***************************/
+.onoffswitch {
+    position: relative; width: 87px; margin: 0; padding: 0;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+    margin: 0; padding: 0;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 4px;
+    margin: 0; padding: 0;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+    padding: 0;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 17px; padding: 0; line-height: 17px;
+    font-size: 13px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+    margin: 0;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: #EEEEEE; color: #999999;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 15px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+    margin: 0;
+}
+.onoffswitch-switch {
+    display: block; width: 17px; margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 66px;
+    border: 2px solid #999999; border-radius: 4px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+    padding-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+/*******************************************************************/
+/************** Opciones Rejilla******************/
+
+.grid-option{
+	width: 100%;
+	height: 50px;
+	background-color: ;
+	padding: 0;
+	margin-bottom: 20px;
+}
+
+.boton-grid{
+	width: 100px;
+	height: 20px;
+	font-size: 12px;
+	font-family: helvetica;
+}
+
+.info-options{
+	font-size: 12px;
+	font-family: helvetica;
+}
+
+.pos-left{
+	float: left;
+	margin-left: 50px;
+}
+
+/*******************************************************************/
+/*********************    Datos de juego    ************************/
+
+.data-play{
+	width: 100%;
+	height: 150px;
+	background-color: #FDFDFD;
+}
+
+.data-play h1{
+	width: 100%;
+	height: 20px;
+	background-color: ;
+	font-family: helvetica;
+	font-size: 15px;
+	margin-bottom:0px;
+	padding-left: 5px;
+
+}
+
+.data-info{
+	border: 1px solid grey;
+	border-radius: 3px;
+	width: 100%;
+	height: auto;
+	padding: 3px;
+	margin-bottom: 2px;
+}
+
+.puntuacion{
+	width: 100%;
+	height: 30px;
+}
+
+.set{
+	width: 100px;
+}
+
+.saque{
+	width: 200px;
+	margin: 0;
+}
+.saque-team{
+	width: 117px;
+	height: 30px;
+}
+
+.team-name-point{
+	width: 150px;
+	height: 30px;
+	font-size: 12px;
+}
+
+.team-point{
+	width: 50px;
+	height: 30px;
+}
+
+/*******************************************************************/
+
+.tags-play{
+	width: 100%;
+	height: 175px;
+}
+
+.tags-play h1{
+	width: 100%;
+	height: 20px;
+	background-color: ;
+	font-family: helvetica;
+	font-size: 15px;
+	margin: 0;
+	padding-left: 5px;
+}
+
+
+.tags-play-to-play{
+	border: 1px solid grey;
+	border-radius: 3px;
+	width: 100%;
+	height: 158px;
+	padding: 5px;
+	overflow: auto;
+	margin-left: 0px;
+}
+
+.tags-play-to-play ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.tags-play-to-play ul li{
+	width: 100%;
+	height: 20px;
+	margin: 4px;
+	padding-left: 10px;
+	padding-top: 1px;
+	font-size: 11px;
+	border-radius: 10px;
+	background-color: #CCC;
+	font: black;
+}
+
+.tags-list-play{
+	padding: 0;
+	margin: 0;
+}
+
+.description-tags{
+	width: 60%;
+	height: 90%;
+}
+
+.shrtcts-tags{
+	width: 35%;
+	height: 70%;
+	background-color: white;
+	padding-left: 6px;
+	border-radius: 25px;
+	margin-top: 2px;
+	font-family: helvetica;
+	font: #333;
+	font-size: 10px;
+	margin-left: 3px;
+}
+
+.fin-table{
+	margin-bottom: 50px;
+}
+
+.adquisicion{
+	font-size: 16px;
+}
+
+.sombreado{
+	width: auto;
+	height: auto;
+	background-color: #999;
+	font-size: 12px;
+	font-style: helvetica;
+	height: auto;
+}
+
+
+#InputDescrTag{
+	resize: none;
+	margin-left: 65px;
+	padding: 7px;
+	padding-left: 12px;
+	width: 332px;
+	height: 100px;
+	border-radius: 4px;
+	border-color: #CCC;
+	font-size: 14px;
+}
+
+#TagTitle{
+	margin: 5px;
+	font-size: 15px;
+	font-style: helvetica;
+	font-weight: bold;
+}
+
+#canvas{ 
+	position:absolute;
+	width:665px; 
+	height:500px; 
+	background-color: grey;
+}
+#videomatch{ 
+	position:absolute; 
+	width:1024px;
+	height:800px; 
+	z-index:1 
+}
+#svgContainer{
+	margin-top: 0px;
+	position:absolute;
+	width:300px; 
+	height:405px; 
+	z-index:2000; 
+	visibility: visible;
+	border-style: solid;
+}
+
+video#videomatch::-webkit-media-controls-panel {
+    display: flex !important;
+    opacity: 1 !important;
+}
+
+
+/*********************
+//   OPTIONS GRID
+*********************/
+
+#options-grid-table{
+	width: 100%;
+	height: 80px;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+#options-grid-table td{
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+#options-grid-title{
+	font-family: helvetica;
+	margin-bottom: 5px;
+	border-bottom: 1px black;
+	border-bottom-style: solid;
+	font-size: 14px;
+	font-weight: bold
+}
+
+#options-grid{
+	font-family: helvetica;
+	margin-bottom: 5px;
+	font-size: 12px;
+}
+
+#title-grid{
+	background-color: #EDEDED;
+	border-right: 1px black;
+	border-right-style: solid;
+}
+
+.n_lines{
+	width: 50px;
+	height: auto;
+}
+#grid-space{
+	padding-left: 10px;
+}
+
+.boton-grid-options{
+	width: 70px;
+	height: 25px;
+	font-size: 12px;
+	font-family: helvetica;
+	margin-top: 0;
+	margin-left: 2.5px;
+	margin-right: 2.5px;
+}
+
+.fila-tag{
+	width: 60px;
+	height: 30px;
+	font-size: 10px;
+}
+
+.fila-tag-input-number{
+	width: 40px;
+	height: 20px;
+	font-size: 10px;
+	padding: 0;
+	margin:0;
+}
+
+
+.fila-tag-input-par{
+	width: 22px;
+	height: 20px;
+	font-size: 10px;
+	padding: 0;
+	margin:0;
+
+}
+
+.fila-tag-select{
+	width: 50px;
+	height: 20px;
+	font-size: 10px;
+}
+
+.boton-grid-options{
+	margin: 0;
+	padding: 0;
+}
+
+tr.resaltar {
+        background-color: #DCDCDC;
+        cursor: pointer;
+}
+
+#logout{
+	margin-left: 70px;
+	margin-right: 5px;
+	width: 90px;
+	height: 33px;
+}
+
+#spnlogout{
+	font-size: 14px;
+	padding: 0;
+}
+
+.video-analisis{
+	width: 49.75%;
+	height: 510px;
+	margin: 0;
+	border-bottom: 2px solid;
+	float: left;
+	margin-bottom: 5px;
+	padding: 2px;
+}
+
+div#margen-frontal{
+	margin-right: 0.25%;
+}
+
+div#margen-lateral{
+	margin-left: 0.25%;
+}
+
+.videoContainer{ 
+	position:absolute; 
+	width:665px; 
+	height:500px; 
+	z-index:100;
+	background-color: black;
+}
+
+#svgContainer1{ 
+	position:absolute; 
+	width:665px; 
+	height:500px; 
+	z-index:2000; 
+	cursor:pointer;
+	//border: 1px solid 
+}
+
+#svgContainer2{ 
+	position:absolute; 
+	width:665px; 
+	height:500px; 
+	z-index:2000; 
+	//border: 1px solid 
+}
+
+.vdeo{
+	position: absolute;
+	width: 1080px;
+	height: 100%;
+}
+
+#InputNameCritery{
+	text-transform: capitalize;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	margin-left: 6px;
+}
+
+#shortcutcritery{
+	text-transform: capitalize;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+#btn-add-critery{
+	background-color: #8D87FF;
+	color: white;
+	margin-left: 125px;
+}
+
+#InputDescrCritery{
+	border: 1px solid;
+	border-color: gainsboro;
+	border-radius: 7px;
+    padding: 10px; 
+    width: 470px;
+    resize: none;
+    overflow: auto;
+    height: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+#InputPreCritery{
+	width: 70px;
+}
+#InputPostCritery{
+	width: 70px;
+}
+
+#table-critery tbody tr:hover {
+  background-color: lightyellow;
+}
+
+#table-critery thead {
+  	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	border-top: 1px solid;
+	background-color: gainsboro;
+	font-weight: bold;
+}
+
+#btn-new-category{
+	width: 40px;
+	height: 40px;
+}
+
+#InputDescrCtgry{
+	border: 1px solid;
+	border-color: gainsboro;
+	border-radius: 7px;
+    padding: 10px; 
+    width: 470px;
+    resize: none;
+    overflow: auto;
+    height: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+#description-tmplt{
+	border: 1px solid;
+	border-color: gainsboro;
+	border-radius: 7px;
+    padding: 10px; 
+    width: 470px;
+    resize: none;
+    overflow: auto;
+    height: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+#name-tmplt{
+	width: 470px;
+}
+
+#add-new-template{
+	visibility: hidden;
+	display: none;
+	opacity: 1;
+	margin-top: 25px;
+	border-top: solid 1px black
+}
+
+#critery-slctr{
+	width: auto;
+	height: auto;
+	margin-top: 5px;
+	margin-left: 2px;
+	-webkit-transition: background-color 0.3s; /* Safari */
+    transition: background-color 0.3s;
+    border-radius: 7px;
+}
+
+#critery-slctr:hover{
+	background-color: #AEC6CF;
+}
+
+#btn-up-critery{
+	width: 80px;
+	height: 35px;
+	font-size: 15px;
+	padding-left: 6px;
+	padding-bottom : 10px;
+}
+
+#freekeys{
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 10px;
+}
+
+#errorname{
+	color: red;
+	font-size: 12px;
+	text-align: right;
+	width: 475px;
+}
+
+#AreaDescrCritery{
+	resize: none;
+	padding: 7px;
+	padding-left: 12px;
+	width: 300px;
+	height: 75px;
+	border-radius: 4px;
+	border-color: #CCC;
+	font-size: 12px;
+}
+
+#btn-play-pause{
+	width: 80px;
+}
+
+.playvideo{
+	width: 100px;
+	padding: auto;
+}
+
+.reproductor{
+	border-bottom: solid 1px grey;
+	text-align: center;
+}
+
+.option-grid{
+	float: left;
+	margin-left:5px;
+	width: 130px;
+	padding-bottom: 9px;
+}
+
+.marcador{
+	border-top: solid 1px blue;
+	border-bottom: solid 1px blue;
+	padding-left: 70px;
+	margin-right: 10px;
+	padding-top: 10px;
+	padding-left: 100px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#puntuacion{
+	padding-bottom: 15px;
+}
+
+.actualiza-marcador{
+	padding: 0;
+	margin: 0;
+}
+
+#marcador{
+	width: 40px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+.sinc{
+	margin-right: 5px;
+	width: 20px;
+}
+
+.sub-video{
+	margin:20px;
+}
+
+#first-values{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 25px;
+	width: 500px;
+	height: auto;
+	padding: 20px;
+	border: solid 1px grey;
+	display: block;
+	float: left;
+}
+
+#btn-enviar{
+	margin-top: 25px;
+}
+
+#grid-options{
+	border: solid 1px grey;
+	border-radius: 5px;
+	padding: 5px;
+	margin-right: 5px;
+	margin-left: 50px;
+	width: auto;
+	display: block;
+	float: left;
+	background-color: #E0FFFF;
+}
+
+#title-div{
+	font-size: 11px;
+}
+#vlrs-grid li{
+	width: 100px;
+	margin-bottom: 5px;
+}
+
+p#sel1{
+	size: 9px;
+}
+
+#SetB{
+	size: 12px;
+	padding-right: 2px;
+	border-top: solid 1px black;
+	border-bottom: solid 1px black;
+	border-right: solid 1px black;
+}
+
+#SetA{
+	size: 12px;
+	padding-left: 2px;
+	border-top: solid 1px black;
+	border-bottom: solid 1px black;
+	border-left: solid 1px black;
+}
+
+#btn-rotationA{
+	margin-bottom: 10px;
+}
+#btn-rotationB{
+	margin-bottom: 10px;
+}
+
+
+.info-basic-video{
+	height: auto;
+	background-color: #F5F5F5;
+}
+
+.template-criteries{
+	width: auto;
+	height: 50px;
+	border: solid 2px black;
+	margin: 15px;
+	padding: 5px;
+}
+
+#saque{
+	padding-left: 50px;
+}
+
+.rotation{
+	width: 350px;
+	height: 300px;
+	border: solid 2px black;
+	border-radius: 5px;
+	display: none;
+	position: absolute;
+	margin: 10px;
+	float: right;
+	background-color: #F5F5F5;
+	padding: 5px;
+}
+
+.table-analisis{
+	width: auto;
+	height: 250px;
+	border: solid 1px black;
+	margin: 5px;
+	padding: 5px;
+}
+
+.pos-game{
+	width: 90px;
+	height: 20px;
+	margin: 10px;
+}
+
+#player{
+	width: 95px;
+	size: 9px;
+	height: 30px;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+#libero{
+	width: 150px;
+	size: 9px;
+	height: 30px;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.select-rotation{
+	margin: 10px;
+	padding: 5px;
+	width: 500px;
+	size: 9px;
+}
+
+#n-rotation:hover{
+	border-left: solid 1px red;
+}
+
+#n-rotation{
+	width: 40px;
+}
+
+.critery-border{
+	border-left: solid 2px grey;
+	border-bottom: solid 1px grey;
+	border-top: solid 1px grey; 
+}
+
+.x-border{
+	border-bottom: solid 1px grey;
+	border-top: solid 1px grey; 
+}
+
+.xy-border{
+	border-right: solid 2px grey;
+	border-bottom: solid 1px grey;
+	border-top: solid 1px grey; 
+}
+
+#table-analisis-t{
+	font-size: 9px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	height: 200px;
+	overflow: auto;			
+}
+
+a.export, a.export:visited {
+    display: inline-block;
+    text-decoration: none;
+    color:#000;
+    background-color:#ddd;
+    border: 1px solid #ccc;
+    padding:8px;
+}
+
+#InputDescrDescriptor{
+	text-transform: capitalize;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-left: 0px;
+	resize: none;
+	width: 427px;
+	height: 100px;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+#dvData{
+	overflow-x: scroll;
+	overflow-y: scroll;
+	width: 100%;
+	height: 300px;
+}
+
+#InputSortnameTeam{
+	text-transform:uppercase;
+}
+
+#menu-criteries{
+	margin-bottom: 0;
+	height: auto;
+}
+
+#list-of-criteries{
+	height: 20px;
+}
+
+
+#video_delete{
+	margin-top: 30px;
+	margin-bottom: 50px;
+	margin-left: 40%;
+}
+
+#newteamchamp{
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+#restofteams{
+	width: 200px;
+	margin-right: 25px;
+}
+
+#addnewteamChamp{
+	margin-right: 90px;
+	width: 90px;
+}
+
+#menu_contenido{
+	height: 30px;
+}
+
+.menu_cont{
+	height: 30px;
+}
+
+
+#csv-hidden{
+	visibility: hidden;
+}
+
+.teamsclick{
+	font-size: 12px;
+	font-family: Helvetica;
+	color: red;
+}
+
+#delete_all_template{
+	width: 130px;
+	height: 30px;
+	font-size: 10px;
+	font-family: Helvetica;
+	color: white;
+	background-color: red;
+	float: right;
+	margin: 30px;
+}
+
+#inftabledivisiones{
+	font-size: 10px;
+	font-family: Helvetica;
+}
+
+#n-vertical{
+	width: 100px;
+}
+
+#n-horizontal{
+	width: 100px;
+}
+
+#time-seconds{
+	cursor: pointer;
+}
+
+#drawer_criteries{
+	margin:30px;
+}
+
+#drawercriterios{
+	width: 800px;
+	border-top: solid 1px grey;
+	margin: 35px;
+	padding-left: 20px;
+}
+
+#nuevodibujo{
+	position:absolute;
+	z-index:2000; 
+	visibility: visible;
+	margin: 35px;
+	border: solid 2px grey;
+}
+#table_query_draw th{
+	margin:0;
+	width: 20px;
+}
+#table_query_draw td{
+	margin:0;
+	width: 70px;
+	
+}
+
+#table_query_draw{
+	z-index:3000; 
+}

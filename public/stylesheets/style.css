@@ -1,0 +1,30 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#centrar {
+	width: 200px;
+	height: 200px;
+	background-color: #DDDDDD;
+	margin-left: 100%-100px;
+	padding: 15px;
+}
+
+#centrar h1{
+	font-size: 12px;
+	font-family: Helvetica;
+	margin-bottom: 2px;
+	margin-top: 5px;  
+	width: auto;
+}
+
+.error {
+	font-size: 10px;
+	font-family: Helvetica;
+	color: red;
+}
