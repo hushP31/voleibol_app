@@ -1,0 +1,19 @@
+{
+	"name": "critery name",
+	"description": "critery description",
+	"pre_time": "Pre-Action Seconds",
+	"post_time": "Post-Action Seconds ",
+	"categories": "categories list of critery",
+	"type": "three types: no, xy, xyz",
+	"type_time": "If critery use other critery like reference time",
+	"time_critery": "critery for to calculate time",
+
+	"name": {"type": "String", "required": true},
+	"description": {"type": "String", "required": false},
+	"pre_time":  {"type": "Number", "required": true},
+	"post_time":  {"type": "Number", "required": true},
+	"categories": {"type": "Object", "required": false},
+	"type": {"type": "String", "required": true},
+	"type_time": {"type": "String", "required": true},
+	"time_critery": {"type": "Object", "required": false}
+}

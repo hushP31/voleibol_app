@@ -1,0 +1,13 @@
+﻿extends ../layout
+block content
+  h1 Nuevo TAG
+  form(method="post", action="#{action}")
+    -if(put)
+      input(type="hidden", name="_method", value="PUT")
+    label Nombre 
+    br
+    input(type="text", name="name", required="required", value="#{tag.name}")
+
+    br
+    input(type="submit", value="Guardar")
+    a(href="/login")  Cancelar

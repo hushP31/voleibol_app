@@ -1,0 +1,17 @@
+﻿extends ../layout
+block content
+  h1 Nuevo EQUIPO
+  form(method="post", action="#{action}")
+    -if(put)
+      input(type="hidden", name="_method", value="PUT")
+    label Nombre 
+    br
+    input(type="text", name="name", required="required", value="#{team.name}")
+    br
+    label Ranking
+    br
+    input(type="number", name="id", required="required", value="#{team.id}")
+    
+    br
+    input(type="submit", value="Guardar")
+    a(href="/login")  Cancelar

@@ -1,0 +1,15 @@
+{
+	"name": "championship name",
+	"numberofteams": "number of members teams in the championship.",
+	"numberofmatchs": "number of matchs in the championship.",
+	"listofteams": "roster teams in the championship. Save the _id (mongo) of teams", 
+	"listofmatchs": "Championship games list. List of: [[_id:teamA, _id:teamB], id:00-99, _id:video]",
+	"date": "date of championship",
+
+	"name": {"type": "String", "required": true},
+	"numberofteams": {"type": "Number", "required": true},
+	"numberofmatchs": {"type": "Number", "required": true},
+	"listofteams": {"type": "Object", "required": true}, 
+	"listofmatchs": {"type": "Object", "required": true},
+	"date":{"type":"String", "required":false}
+}

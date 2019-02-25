@@ -1,0 +1,11 @@
+{
+	"name": "descriptor name",
+	"description": "definition of descriptor ",
+	"categories": "categories list of descriptor",
+	"keyaccess": "key (minisculum) for access",
+
+	"name": {"type": "String", "required": true},
+	"description": {"type": "String", "required": false},
+	"keyaccess": {"type": "String", "required": false},
+	"categories": {"type": "Object", "required": false}
+}

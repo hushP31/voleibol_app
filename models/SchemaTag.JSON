@@ -1,0 +1,10 @@
+{
+	"name": "tag name",
+	"name": {"type": "String", "required": true},
+	"shortcut": "shortcut keys",
+	"shortcut": {"type": "Object", "required": true}, 
+	"typeTag": "tag type. Number, Par, Team, Text", 
+	"typeTag": {"type": "Object", "required": true},
+	"description": "A Short description tag",
+	"description": {"type": "String", "required": true}
+}

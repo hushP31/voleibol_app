@@ -1,0 +1,13 @@
+{
+	"name": "template name",
+	"description": "template description",
+	"list_criteries": "list of criteries to be analyzed",
+	"list_keyaccess": "list of keys for access to criteries to be analyzed",
+	"list_descriptors": "list of descriptors to be analyzed",
+	
+	"name": {"type": "String", "required": true},
+	"description": {"type": "String", "required": true},
+	"list_criteries": {"type": "Object", "required": true},
+	"list_keyaccess":  {"type": "Object", "required": true},
+	"list_descriptors": {"type": "Object", "required": true}
+}

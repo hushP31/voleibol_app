@@ -1,0 +1,27 @@
+﻿extends ../layout
+block content
+
+    h1 Nuevo VIDEO
+    form.video(method="post", action="#{action}", enctype="multipart/form-data")
+        -if(put)
+            input(type="hidden", name="_method", value="PUT")
+        br
+        label Frontal
+        input(type='file', name='video_frontal', accept='video/mp4', id='fileinputvideoF', onchange='handleFileSelectF();' correct='not')
+        div(id="editorF")
+        br
+        label Lateral
+        input(type='file', name='video_lateral', accept='video/mp4', id='fileinputvideoL', onchange='handleFileSelectL();' correct='not')
+        div(id="editorL")
+        br
+        label Tags
+        br
+        input(type="text", name="listoftags", required="required")
+
+        input(type="hidden", name="idchampionship", required="required", value="#{championship._id}")
+        br
+        input(type="hidden", name="idmatch", required="required", value="#{match}")
+        br
+        br
+        input(id="UploadVideo" type="submit", value="Guardar")
+        a(href="/api/showchampionship/#{championship._id}")  Cancelar

@@ -1,0 +1,150 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'get-video-dimensions-cli',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose cache add [ 'get-video-dimensions-cli', null ]
+5 verbose cache add name=undefined spec="get-video-dimensions-cli" args=["get-video-dimensions-cli",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'get-video-dimensions-cli',
+6 verbose parsed url   path: 'get-video-dimensions-cli',
+6 verbose parsed url   href: 'get-video-dimensions-cli' }
+7 silly lockFile 81ce04aa-get-video-dimensions-cli get-video-dimensions-cli
+8 verbose lock get-video-dimensions-cli /home/hushp31/.npm/81ce04aa-get-video-dimensions-cli.lock
+9 silly lockFile 81ce04aa-get-video-dimensions-cli get-video-dimensions-cli
+10 silly lockFile 81ce04aa-get-video-dimensions-cli get-video-dimensions-cli
+11 verbose addNamed [ 'get-video-dimensions-cli', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 927412ea-get-video-dimensions-cli get-video-dimensions-cli@
+14 verbose lock get-video-dimensions-cli@ /home/hushp31/.npm/927412ea-get-video-dimensions-cli.lock
+15 silly addNameRange { name: 'get-video-dimensions-cli', range: '*', hasData: false }
+16 verbose request where is /get-video-dimensions-cli
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id 9db13cffdf2e5c21
+19 verbose url raw /get-video-dimensions-cli
+20 verbose url resolving [ 'https://registry.npmjs.org/', './get-video-dimensions-cli' ]
+21 verbose url resolved https://registry.npmjs.org/get-video-dimensions-cli
+22 verbose request where is https://registry.npmjs.org/get-video-dimensions-cli
+23 info trying registry request attempt 1 at 13:04:58
+24 http GET https://registry.npmjs.org/get-video-dimensions-cli
+25 http 200 https://registry.npmjs.org/get-video-dimensions-cli
+26 silly registry.get cb [ 200,
+26 silly registry.get   { date: 'Fri, 15 Jun 2018 11:04:59 GMT',
+26 silly registry.get     'content-type': 'application/json; charset=UTF-8',
+26 silly registry.get     'transfer-encoding': 'chunked',
+26 silly registry.get     connection: 'keep-alive',
+26 silly registry.get     'set-cookie': [ '__cfduid=d7c97851ed705fdd63ae67470052e681e1529060698; expires=Sat, 15-Jun-19 11:04:58 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+26 silly registry.get     'cache-control': 'max-age=300',
+26 silly registry.get     'cf-cache-status': 'MISS',
+26 silly registry.get     'cf-ray': '42b48f187be0544a-MAD',
+26 silly registry.get     etag: 'W/"1d8bfcdccd8fe81604ae41816ba67f59"',
+26 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+26 silly registry.get     'last-modified': 'Sun, 27 May 2018 02:11:58 GMT',
+26 silly registry.get     vary: 'accept-encoding, accept',
+26 silly registry.get     server: 'cloudflare',
+26 silly registry.get     'content-encoding': 'gzip' } ]
+27 silly addNameRange number 2 { name: 'get-video-dimensions-cli', range: '*', hasData: true }
+28 silly addNameRange versions [ 'get-video-dimensions-cli', [ '1.0.1' ] ]
+29 verbose addNamed [ 'get-video-dimensions-cli', '1.0.1' ]
+30 verbose addNamed [ '1.0.1', '1.0.1' ]
+31 silly lockFile 209c1ef0-get-video-dimensions-cli-1-0-1 get-video-dimensions-cli@1.0.1
+32 verbose lock get-video-dimensions-cli@1.0.1 /home/hushp31/.npm/209c1ef0-get-video-dimensions-cli-1-0-1.lock
+33 silly lockFile 91a61fad-t-video-dimensions-cli-1-0-1-tgz https://registry.npmjs.org/get-video-dimensions-cli/-/get-video-dimensions-cli-1.0.1.tgz
+34 verbose lock https://registry.npmjs.org/get-video-dimensions-cli/-/get-video-dimensions-cli-1.0.1.tgz /home/hushp31/.npm/91a61fad-t-video-dimensions-cli-1-0-1-tgz.lock
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/get-video-dimensions-cli/-/get-video-dimensions-cli-1.0.1.tgz',
+35 verbose addRemoteTarball   '1cb86b792ba4ddee409fedd29d6aa158d2f2a718' ]
+36 info retry fetch attempt 1 at 13:04:59
+37 verbose fetch to= /tmp/npm-5337-TBR5w7Pn/registry.npmjs.org/get-video-dimensions-cli/-/get-video-dimensions-cli-1.0.1.tgz
+38 http GET https://registry.npmjs.org/get-video-dimensions-cli/-/get-video-dimensions-cli-1.0.1.tgz
+39 http 200 https://registry.npmjs.org/get-video-dimensions-cli/-/get-video-dimensions-cli-1.0.1.tgz
+40 silly lockFile 91a61fad-t-video-dimensions-cli-1-0-1-tgz https://registry.npmjs.org/get-video-dimensions-cli/-/get-video-dimensions-cli-1.0.1.tgz
+41 silly lockFile 91a61fad-t-video-dimensions-cli-1-0-1-tgz https://registry.npmjs.org/get-video-dimensions-cli/-/get-video-dimensions-cli-1.0.1.tgz
+42 silly lockFile 209c1ef0-get-video-dimensions-cli-1-0-1 get-video-dimensions-cli@1.0.1
+43 silly lockFile 209c1ef0-get-video-dimensions-cli-1-0-1 get-video-dimensions-cli@1.0.1
+44 silly lockFile 927412ea-get-video-dimensions-cli get-video-dimensions-cli@
+45 silly lockFile 927412ea-get-video-dimensions-cli get-video-dimensions-cli@
+46 silly resolved [ { name: 'get-video-dimensions-cli',
+46 silly resolved     version: '1.0.1',
+46 silly resolved     description: '**A simple command line tool to find the width and height a video**',
+46 silly resolved     main: 'index.js',
+46 silly resolved     bin: { 'video-dimensions': 'index.js' },
+46 silly resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+46 silly resolved     author:
+46 silly resolved      { name: 'olizilla',
+46 silly resolved        email: 'oli@tableflip.io',
+46 silly resolved        url: 'https://tableflip.io' },
+46 silly resolved     license: 'AGPL-3.0',
+46 silly resolved     dependencies: { 'get-video-dimensions': '^1.0.0' },
+46 silly resolved     devDependencies: {},
+46 silly resolved     repository:
+46 silly resolved      { type: 'git',
+46 silly resolved        url: 'git+https://github.com/tableflip/video-dimensions.git' },
+46 silly resolved     keywords: [ 'width', 'height', 'video' ],
+46 silly resolved     bugs: { url: 'https://github.com/tableflip/video-dimensions/issues' },
+46 silly resolved     homepage: 'https://github.com/tableflip/video-dimensions#readme',
+46 silly resolved     gitHead: 'bac82d2b0c2f5100c5e9546144624cf3f0505e8a',
+46 silly resolved     _id: 'get-video-dimensions-cli@1.0.1',
+46 silly resolved     _shasum: '1cb86b792ba4ddee409fedd29d6aa158d2f2a718',
+46 silly resolved     _from: 'get-video-dimensions-cli@',
+46 silly resolved     _npmVersion: '3.4.0',
+46 silly resolved     _nodeVersion: '4.2.2',
+46 silly resolved     _npmUser: { name: 'olizilla', email: 'oli@zilla.org.uk' },
+46 silly resolved     maintainers: [ [Object] ],
+46 silly resolved     dist:
+46 silly resolved      { shasum: '1cb86b792ba4ddee409fedd29d6aa158d2f2a718',
+46 silly resolved        tarball: 'https://registry.npmjs.org/get-video-dimensions-cli/-/get-video-dimensions-cli-1.0.1.tgz' },
+46 silly resolved     _npmOperationalInternal:
+46 silly resolved      { host: 'packages-9-west.internal.npmjs.com',
+46 silly resolved        tmp: 'tmp/get-video-dimensions-cli-1.0.1.tgz_1454420940023_0.3149417000822723' },
+46 silly resolved     directories: {},
+46 silly resolved     _resolved: 'https://registry.npmjs.org/get-video-dimensions-cli/-/get-video-dimensions-cli-1.0.1.tgz' } ]
+47 info install get-video-dimensions-cli@1.0.1 into /usr/local/lib
+48 info installOne get-video-dimensions-cli@1.0.1
+49 verbose lib/node_modules/get-video-dimensions-cli unbuild
+50 verbose tar unpack /home/hushp31/.npm/get-video-dimensions-cli/1.0.1/package.tgz
+51 silly lockFile 7171114a-modules-get-video-dimensions-cli tar:///usr/local/lib/node_modules/get-video-dimensions-cli
+52 verbose lock tar:///usr/local/lib/node_modules/get-video-dimensions-cli /home/hushp31/.npm/7171114a-modules-get-video-dimensions-cli.lock
+53 silly lockFile f7422600-dimensions-cli-1-0-1-package-tgz tar:///home/hushp31/.npm/get-video-dimensions-cli/1.0.1/package.tgz
+54 verbose lock tar:///home/hushp31/.npm/get-video-dimensions-cli/1.0.1/package.tgz /home/hushp31/.npm/f7422600-dimensions-cli-1-0-1-package-tgz.lock
+55 silly gunzTarPerm modes [ '775', '664' ]
+56 error Error: EACCES, mkdir '/usr/local/lib/node_modules/get-video-dimensions-cli'
+56 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/get-video-dimensions-cli']
+56 error   errno: 3,
+56 error   code: 'EACCES',
+56 error   path: '/usr/local/lib/node_modules/get-video-dimensions-cli',
+56 error   fstream_type: 'Directory',
+56 error   fstream_path: '/usr/local/lib/node_modules/get-video-dimensions-cli',
+56 error   fstream_class: 'DirWriter',
+56 error   fstream_stack:
+56 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+56 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+56 error      'Object.oncomplete (fs.js:107:15)' ] }
+57 error Please try running this command again as root/Administrator.
+58 error System Linux 4.4.0-127-generic
+59 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "get-video-dimensions-cli" "--save"
+60 error cwd /home/hushp31/Escritorio/videomngvoley/code
+61 error node -v v0.10.32
+62 error npm -v 1.4.28
+63 error path /usr/local/lib/node_modules/get-video-dimensions-cli
+64 error fstream_path /usr/local/lib/node_modules/get-video-dimensions-cli
+65 error fstream_type Directory
+66 error fstream_class DirWriter
+67 error code EACCES
+68 error errno 3
+69 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/get-video-dimensions-cli'
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+70 error fstream_stack Object.oncomplete (fs.js:107:15)
+71 verbose exit [ 3, true ]

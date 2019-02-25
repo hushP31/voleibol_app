@@ -1,0 +1,45 @@
+﻿extends ../layout
+block content-team
+
+  h2 TEAMS
+  p
+    div.form-inline(id='form-addteam')
+      ul.list-inline
+        li
+          div.form-group
+            label(for="InputNameTeam") Name 
+            input.form-control(type="text", name="nameteam", placeholder="team name", id="InputNameTeam")
+        li
+          div.form-group
+            label(for="InputSortnameTeam")  Sort Name 
+            input.form-control(type="text", maxlength="3", name="sortname", placeholder="ej. BRA", id="InputSortnameTeam")
+        li
+          div.form-group
+            label(for="InputRankingTeam")  Ranking 
+            input.form-control(type="number", name="id", placeholder="ej. 2", id="InputRankingTeam", min="1")
+        li
+          button.btn.btn-default(type="submit", id='botonaddteam') Add team
+  -if(teams.length >= 0)
+    table.table.table-condensed.list-video(id="table-teams")
+      thead
+        tr
+          th Name
+          th Sort-Name
+          th Ranking 
+      tbody
+        -each item in teams
+          tr(id='row_team-#{item._id}')
+            td(id="team_name") #{item.name}
+            td(id="team_sortname") #{item.sortname}
+            td(id="team_id") #{item.id}
+            td 
+              a(href="javascript:void(0);", class='btn btn-info showteam', id='btn-show', idmongo='#{item._id}') Show
+            td 
+              a(href="javascript:void(0);", class='btn btn-info updateteam', id='btn-update', idmongo='#{item._id}') Edit
+            td 
+              a(href="javascript:void(0);", class='btn btn-info deleteteam', id='btn-delete', idmongo='#{item._id}', name='#{item.name}') Delete
+  -else
+    p No existen equipos creados
+
+  p 
+    a(href="/") Return

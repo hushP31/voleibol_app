@@ -1,0 +1,15 @@
+{			
+	"name": "user name",
+	"last_name": "user last name",
+	"name_user": "unique name user",
+	"email": "unique email user", 
+	"password": "password user",
+	"role": "role user (admin, normal_user)",
+
+	"name": {"type": "String", "required": true},
+	"last_name": {"type": "String", "required": true},
+	"name_user": {"type": "String", "required": true},
+	"email": {"type": "String", "required": true}, 
+	"password": {"type": "String", "required": true},
+	"role": {"type": "String"}
+}

@@ -1,0 +1,27 @@
+{
+	"name": "video name",
+	"name_frontal": "video frontal name",
+	"name_lateral": "video lateral name",
+	"listoftags": "descriptive labels video",
+	"file": "video directory path",
+	"name_file": "file name without extension",
+	"championship": "championship id", 
+	"match": "match id in the championship",
+	"duration": "video length in seconds",
+	"analysis": "analysis of the video match",
+	"grid": "video's grid. One for each video",
+	"date": "date of match",
+
+	"name": {"type": "String", "required": true},
+	"name_frontal": {"type": "String", "required": true},
+	"name_lateral": {"type": "String", "required": true},
+	"listoftags": {"type": "Object", "required": true},
+	"file": {"type": "String", "required": true},
+	"name_file": {"type": "String", "required": true},
+	"championship": {"type": "String", "required": true}, 
+	"match": {"type": "Number", "required": true},
+	"duration": {"type": "Number", "required": true},
+	"analysis": {"type": "Object", "required": false},
+	"grid":{"type": "Object", "required": false},
+	"date":{"type":"String", "required":false}
+}

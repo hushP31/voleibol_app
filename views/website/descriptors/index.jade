@@ -1,0 +1,37 @@
+﻿extends ../layout
+block content-team
+
+  h2 Descriptors
+  p
+    div.form-inline(id='form-name')
+      ul.list-inline
+        li
+          div.form-group
+            label(for="InputNameDescriptor descriptorname") Name 
+            input.form-control(type="text", name="name", placeholder="descriptor name", id='InputNameDescriptor', required='')
+        li
+          select.form-control(id="keyaccessDescriptor")
+            -each item in keys
+              option(id="Option-#{item}") #{item}
+        li  
+          button.btn.btn-default(type="submit", id='btn-add-descriptor') Add descriptor
+      div.form-group
+        textarea(name="descriptordescription", placeholder="descriptor description", required='', id='InputDescrDescriptor')
+  -if(descriptors.length >= 0)
+    table.table.table-condensed(id='table-descriptor')
+      thead(id="DescriptorTitle")
+        tr
+          td Name
+          td Key Access
+      tbody
+        -each item in descriptors
+          tr(id='row_descriptor-#{item._id}')
+            td(id='name_descriptor-#{item._id}') #{item.name}
+            td(id='key_descriptor-#{item._id}') #{item.keyaccess}
+            td 
+              a(href="/api/showdescriptors/#{item._id}", class='btn btn-info showdescriptors', id='btn-show-descriptor', idmongo='#{item._id}') Show
+  -else
+    p No existen descriptores creados
+
+  p 
+    a(href="/") Return

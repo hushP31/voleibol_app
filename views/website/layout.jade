@@ -1,0 +1,102 @@
+doctype
+html
+head
+	title= title
+	meta(charset='utf-8')
+	meta(http-equiv='X-UA-Compatible' content='IE=edge')
+	meta(name='viewport' content='width=device-width, shrink-to-fit=no, initial-scale=1')
+	meta(name='description' content='')
+	meta(name='author' content='')
+
+	link(rel='stylesheet', href='/stylesheets/css-website/mystyle.css')
+	
+	// jQuery
+	script(type='text/javascript', src="/javascripts/js/jquery.js")
+
+	// Bootstrap Core JavaScript
+	script(type='text/javascript', src="/javascripts/js/bootstrap.min.js")
+	script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+	link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+	script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js')
+	script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+
+	link(href='https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css', rel='stylesheet')
+	script(src='https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js')
+
+	//THREEjs
+	script(type='text/javascript', src="/javascripts/js/three.js/build/three.min.js")
+	script(type='text/javascript', src="/javascripts/js/three.js/build/three.js")
+
+	// Bootstrap Core JavaScript
+	script(type='text/javascript', src="/javascripts/js/bootstrap.js")
+	script(type='text/javascript', src="/javascripts/js/bootstrap-dropdown.js")
+	
+	//My functions
+	script(type='text/javascript' src='/javascripts/myfunctions.js')
+	script(type='text/javascript' src='/javascripts/myfunctions_video_original.js')
+	
+	script(type='text/javascript' src='/javascripts/critery-functions.js')
+	script(type='text/javascript' src='/javascripts/descriptors-functions.js')
+	
+	script(type='text/javascript' src='/javascripts/myfunctions_grid.js')
+	//jquery-ajax
+	script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+
+	link(rel='stylesheet', href='/stylesheets/css-website/bootstrap.css')
+	link(rel='stylesheet', href='/stylesheets/css-website/simple-sidebar.css')
+	link(rel='stylesheet', href='/stylesheets/css-website/bootstrap.min.css')
+	bootstrap-dropdown
+	link(rel='stylesheet', href='/stylesheets/css-website/mystyle.css')
+
+	script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+	link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+	script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js')
+	script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+
+	//Sweetalert
+	link(rel="stylesheet" type="text/css" href="/dist/sweetalert.css")
+	script(type='text/javascript', src="/dist/sweetalert.min.js")
+
+body
+	block menu
+		nav.navbar.navbar-default#menu_contenido
+			.container-fluid.centrar-contenido-1
+			// Brand and toggle get grouped for better mobile display
+			.navbar-header
+				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href='/api/index') Aplicacion Video
+				// Collect the nav links, forms, and other content for toggling
+			#bs-example-navbar-collapse-1.collapse.navbar-collapse.menu_cont
+				ul.nav.navbar-nav
+					li(class=typeof videos === "undefined" ? "" : "active")
+						a(href='/api/index') Videos	
+					li(class=typeof championships === "undefined" ? "" : "active")
+						a(href="/api/showchampionships") Championships
+					li(class=typeof teams === "undefined" ? "" : "active")
+						a(href="/api/showteams") Teams
+					li(class=typeof criteries === "undefined" ? "" : "active")
+						a(href="/api/showcriteries") Criteries
+					li(class=typeof descriptors === "undefined" ? "" : "active")
+						a(href="/api/showdescriptors") Descriptors
+					li(class=typeof templates === "undefined" ? "" : "active")
+						a(href="/api/showtemplates") Templates
+
+				form.navbar-form.navbar-right
+					.form-group
+						a(href="/logout", id="logout", class="btn btn-danger")
+							span(id="spnlogout", class="glyphicon glyphicon-log-out") LogOut
+				
+
+	section.centrar-contenido-1
+		// Content video (default)
+		block content-video
+		// Content championship
+		block content-championship
+		// Content Team
+		block content-team
+	
+		block content

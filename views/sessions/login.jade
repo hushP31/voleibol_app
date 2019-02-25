@@ -1,0 +1,18 @@
+﻿extends ../login/layout_login
+block content
+	div#fullscreen_bg.fullscreen_bg
+		div.container
+			h1.tittle-app #{tittle}
+			h2.tittle-app #{subtittle}
+			form.form-signin(method="post", action="/login")
+				h1.form-signin-heading.text-muted Sign In
+				input.form-control(type="text" name="usuario" placeholder="user " required="" autofocus="")
+				input.form-control(type="password" name="password" placeholder="Password" required="")
+				br
+				-if(error)
+					p.error Invalid User or Password 
+				button.btn.btn-lg.btn-primary.btn-block(type="submit") enter
+				p.newuser Si no está registrado, hágalo pinchando 
+					a(href="/users/create") aqui
+                
+

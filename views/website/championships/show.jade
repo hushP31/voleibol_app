@@ -1,0 +1,74 @@
+﻿extends ../layout
+block content
+	h1(idChampionship="#{championship.id}") #{championship.name} 
+	h3 #{championship.date} 
+	br
+	h3 Equipos Participantes
+	-if(championship.numberofteams > 0)
+		table.table.table-condensed#teamsChamps
+			thead
+				tr
+					th nombre
+					th
+					th id
+					th 
+			tbody
+				- for (var i=0; i<championship.numberofteams; i++)
+					tr(id="row-#{allteams[i]._id}")
+						td.video_match #{allteams[i].name}
+						td.video_match #{allteams[i].sortname}
+						td.video_match #{allteams[i].id}
+						td.video_match 
+							button(type="button" class="close" aria-label="Close" id="delete_team_champ" Nteam="#{allteams[i].name}" idteam="#{allteams[i]._id}") 
+									span(class="glyphicon glyphicon-trash" aria-hidden="true")
+	div#mynewteamchamp
+		button(type="button" class="btn btn-info btn-xs" id="new_team_champ")
+			span(class="glyphicon glyphicon-plus" aria-hidden="true")
+
+	h3 Parings 
+	if championship.numberofmatchs > 0
+		table.table.table-condensed#gamesteams
+			thead
+				tr
+					th local
+					th visit
+					th show
+					th video
+					th delete
+			tbody
+				- for (var i=0; i<championship.numberofmatchs; i++)
+					tr(id="row-game-#{championship.listofmatchs[i].id}")
+						td #{games[i].A}
+						td #{games[i].B}
+						td.video_match
+							- var show=0;
+							- var id_aux;
+							- for (var j=0; j<videos.length && show <1; j++)
+								- if(videos[j].match == championship.listofmatchs[i].id)
+									- show++;
+									- id_aux = j;
+							if show > 0
+								a(href="/api/showvideo/#{videos[id_aux]._id}")
+									span(class="glyphicon glyphicon-film" aria-hidden="true")
+								td.video_match
+									button(type="button" class="close" aria-label="Close" id="delete_video_game" idvideo="#{videos[id_aux]._id}" idgame="#{championship.listofmatchs[i].id}") 
+										span(class="glyphicon glyphicon-remove-sign" aria-hidden="true")
+								- show = 0
+							else
+								a(href="/api/addvideo/#{championship._id}/#{championship.listofmatchs[i].id}")
+									span(class="glyphicon glyphicon-upload" aria-hidden="true")
+								td.video_match
+							td.video_match
+								button(type="button" class="close" aria-label="Close" id="delete_game" idgame="#{championship.listofmatchs[i].id}") 
+									span(class="glyphicon glyphicon-trash" aria-hidden="true")
+	else
+		p No existen partidos creados.
+	
+	div#mynewgamechamp
+		button(type="button" class="btn btn-info btn-sm" id="addnewgame")
+			span(class="glyphicon glyphicon-plus" aria-hidden="true")
+
+	p(style="margin-top:200px;")
+		a(href="/api/showchampionships") Volver atrás
+	br
+	br

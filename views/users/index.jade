@@ -1,0 +1,33 @@
+﻿extends ../layout
+block content
+
+  h2 Usuarios
+  p
+    a(href="/users/create") Crear nuevo usuario
+  -if(users.length > 0)
+    table
+      thead
+        tr
+          th Nombre
+          th Apellido
+          th Usuario
+          th Role
+          th Contraseña
+      tbody
+        -each item in users
+          tr
+            td #{item.name}
+            td #{item.last_name}
+            td #{item.name_user}
+            td #{item.role}
+            td #{item.password}
+            td 
+              a(href="/users/#{item._id}") Ver
+            td 
+              a(href="/users/#{item._id}/edit") Editar
+            td
+              form(method="post", action="/users/#{item._id}")
+                input(type="hidden", name="_method", value="DELETE")
+                a(href="javascript:void(0);", onclick="if(confirm('¿Está seguro que desea eliminar este registro?')){this.parentNode.submit();}") Eliminar
+  -else
+    p No existen usuarios creados

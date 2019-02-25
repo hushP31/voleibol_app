@@ -1,0 +1,61 @@
+﻿extends ../layout
+block content
+  h1 Guardar usuario 1
+  form(method="post", action="#{action}")
+    -if(put)
+      input(type="hidden", name="_method", value="PUT")
+    label Nombre
+    br
+    input(type="text", name="name", required="required", value="#{user.name}")
+    br
+    label Apellidos
+    br
+    input(type="text", name="last_name", required="required", value="#{user.last_name}")
+    br
+    label Nombre de usuario
+    br
+    input(type="text", name="name_user", required="required", value="#{user.name_user}")
+    br
+    label Contraseña
+    br
+    input(type="password", name="password", required="required", value="")
+    br
+    label Email
+    br
+    input(type="text", name="email", required="required", value="#{user.email}")
+    br
+    br
+    input(type="submit", value="Guardar")
+    a(href="/login")  Cancelar
+
+
+    h2 Usuarios
+  p
+    a(href="/users/create") Crear nuevo usuario
+  -if(users.length > 0)
+    table
+      thead
+        tr
+          th Nombre
+          th Apellido
+          th Usuario
+          th Role
+          th Contraseña
+      tbody
+        -each item in users
+          tr
+            td #{item.name}
+            td #{item.last_name}
+            td #{item.name_user}
+            td #{item.role}
+            td #{item.password}
+            td 
+              a(href="/users/#{item._id}") Ver
+            td 
+              a(href="/users/#{item._id}/edit") Editar
+            td
+              form(method="post", action="/users/#{item._id}")
+                input(type="hidden", name="_method", value="DELETE")
+                a(href="javascript:void(0);", onclick="if(confirm('¿Está seguro que desea eliminar este registro?')){this.parentNode.submit();}") Eliminar
+  -else
+    p No existen usuarios creados

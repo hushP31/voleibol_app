@@ -1,0 +1,9 @@
+{
+	"id": "ranking position",
+	"name": "team name",
+	"sortname": "sort-name team",
+	
+	"id": {"type": "Number", "required": true},
+	"name": {"type": "String", "required": true},
+	"sortname": {"type": "String", "required": true}
+}

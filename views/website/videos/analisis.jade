@@ -1,0 +1,15 @@
+extends ../layout_analisis
+block content
+	div(class="video-analisis", id="margen-frontal")
+		div(id="canvas")
+			video(class="videoContainer", id="frontal")
+				source(id="", src='../../media/#{video.name_frontal}.mp4', type='video/mp4')
+				source(id="", src='../../media/#{video.name_frontal}.ogg', type='video/ogg')
+			canvas(id="svgContainer1", height="500", width="665", position="frontal", draw="ON")
+	div(class="video-analisis", id="margen-lateral")
+		div(id="canvas")
+			video(class="videoContainer", id="lateral")
+				source(id="", src='../../media/#{video.name_lateral}.mp4', type='video/mp4')
+				source(id="", src='../../media/#{video.name_lateral}.ogg', type='video/ogg')
+			canvas(id="svgContainer2", height="500", width="665", position="lateral", draw="ON")
+	

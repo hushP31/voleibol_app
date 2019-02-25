@@ -1,0 +1,40 @@
+﻿extends ../layout
+block content
+    h1 New Championship
+    form.form-horizontal.list-video#form_parings(method="post", action="#{action}")
+
+        div.form-group
+            label.col-sm-2.control-label(for="") Championship Name
+            div.col-sm-3
+                input.form-control#inputEmail3(type="text", name="name", placeholder="championship name", required)
+            button.btn.btn-default(type="submit", id=("add-championship")) Add
+        div.form-group
+            label.col-sm-2.control-label(for="") Championship Date
+            div.col-sm-3
+                input(type="date" name="date_championship" required="required")
+        div.form-group
+            div.col-sm-2.control-label(for="")
+                label Teams 
+                p.teamsclick ctrl + click para seleccionar mas de un equipo y/o click y arrastrar el mouse </p>
+            div.col-sm-3.teamschampionship
+                select.form-control#selectteams(name="total_teams[]", multiple='')
+                    -each item in teams
+                        option(value="#{item._id}") #{item.name}
+        div.form-group#parmatchtocopy.hidden
+            label.col-sm-2.control-label(for="")
+            div#paringsmatchs
+                div.col-sm-2
+                    select.form-control#parone(name="par_one")
+                        -each item in teams
+                            option(value="#{item._id}") #{item.name}
+                div.col-sm-2
+                    select.form-control#partwo(name="par_two")
+                        -each item in teams
+                            option(value="#{item._id}") #{item.name}
+                div.col-sm-2
+                    button.btn.btn-default.btn-sm#deletepar(type="button")
+                        span.glyphicon.glyphicon-minus  delete
+
+        div.form-group
+            button.btn.btn-default.btn-sm#addparings(type="button")
+                span.glyphicon.glyphicon-plus  add matchs

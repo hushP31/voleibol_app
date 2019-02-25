@@ -1,0 +1,38 @@
+﻿extends ../layout
+
+block content
+  section.centrar-contenido-1
+    h2 VIDEOS
+    p
+      a(href="/api/addvideo") Crear nuevo video
+    -if(videos.length > 0)
+      table
+        thead
+          tr
+            th Nombre
+            th Ruta
+            th Campeonato
+            th Partido
+            th Duracion
+        tbody
+          -each item in videos
+            tr
+              td #{item.name}
+              td #{item.file}
+              td #{item.championship}
+              td #{item.match}
+              td #{item.duration}
+              
+              td 
+                a(href="/api/showvideo/#{item._id}") Ver
+              td 
+                a(href="/api/showvideo/#{item._id}/edit") Editar
+              td
+                form(method="post", action="/api/deletevideo/#{item._id}")
+                  input(type="hidden", name="_method", value="DELETE")
+                  a(href="javascript:void(0);", onclick="if(confirm('¿Está seguro que desea eliminar este registro?')){this.parentNode.submit();}") Eliminar
+    -else
+      p No existen equipos creados
+
+    p volver a 
+      a(href="/") inicio

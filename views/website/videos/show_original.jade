@@ -1,0 +1,78 @@
+extends ../layout
+block content
+	div.titulo
+		h1
+			ul.list-inline
+				li
+					p.campeonato #{name_championship}
+				li
+					p.partido(teamA="#{teamA.name}", teamB="#{teamB.name}") #{teamA.name} - #{teamB.name}
+	div.contenido-video(id="contenidovideo")
+		div(id="canvas")
+			video(id="videomatch", controls)
+				source(id="videomatch", src='../../media/#{video.name_file}.mp4', type='video/mp4')
+				source(id="videomatch", src='../../media/#{video.name_file}.ogg', type='video/ogg')
+			canvas(id="svgContainer", active="OFF", height="400", width="720")
+		div.options-play.col-xs-6.col-md-4
+			div.grid-option
+				div.pos-left
+						p.info-options Rejilla en pantalla
+						div(class="onoffswitch")
+							input(type="button", value="add grid", idMongo-video="#{video._id}", grid="#{grid}", class="boton-grid")
+				div.pos-left
+					p.info-options Rejilla en pantalla
+					div(class="onoffswitch")
+						input(type="checkbox", name="onoffswitch", class="onoffswitch-checkbox", id="myonoffswitch", checked)
+						label(class="onoffswitch-label", for="myonoffswitch")
+							span(class="onoffswitch-inner")
+							span(class="onoffswitch-switch")
+			div.data-play
+				h1 Datos de Juego
+				div.data-info
+					ul.list-inline
+						li.set
+							div(class="input-group input-group-sm puntuacion")
+								span(class="input-group-addon", id="sizing-addon1") SET
+								input(type="number", class="form-control", placeholder="0", aria-describedby="sizing-addon3")
+						li.saque
+							div(class="input-group input-group-sm puntuacion")
+								span(class="input-group-addon", id="sizing-addon1") Equipo saque
+								select.saque-team
+									option(value="#{teamA.name}") #{teamA.name}
+									option(value="#{teamB.name}") #{teamB.name}
+					div(class="input-group input-group-sm puntuacion")
+						span(class="input-group-addon team-name-point", teamA="#{teamA.name}", id="sizing-addon1") Puntuacion #{teamA.name}
+						input(type="number", class="form-control team-point", placeholder="0", aria-describedby="sizing-addon3")
+					div(class="input-group input-group-sm puntuacion")
+						span(class="input-group-addon team-name-point", teamB="#{teamB.name}", id="sizing-addon1") Puntuacion #{teamB.name}
+						input(type="number", class="form-control team-point", placeholder="0", aria-describedby="sizing-addon3")
+			div.tags-play
+				h1 Etiquetas de análisis y shortcuts
+				div.tags-play-to-play.row
+					-var i=0;
+					-each item in tag
+						-i= i+1;
+						-if(i%2 == 0) 
+							div.col-md-6.tags-list-play
+								ul
+									li 
+										div.col-md-6.description-tags.tags-list-play
+											p.tagname(id="#{item.name}", type_tag="#{item.typeTag}") #{item.name}
+										div.col-md-6.shrtcts-tags.tags-list-play
+											p.shorcut_tag #{item.shortcut}
+						-if(i%2 != 0)		
+							div.col-md-6.tags-list-play
+								ul
+									li
+										div.col-md-6.description-tags.tags-list-play
+											p.tagname(id="#{item.name}", type_tag="#{item.typeTag}") #{item.name}
+										div.col-md-6.shrtcts-tags.tags-list-play
+											p.shorcut_tag #{item.shortcut}
+	div.table-play-to-play
+		ul.list-inline
+			li
+				h3.adquisicion Tabla de adquisicion de datos
+			li
+				input(type="button", value="add analysis", idMongo-video="#{video._id}", class="boton-analysis")
+			li
+				a(href="#", class="export-csv") Export Table data into Excel

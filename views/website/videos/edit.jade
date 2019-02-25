@@ -1,0 +1,33 @@
+extends ../layout_analisis
+block content
+	div(class="video-analisis", id="margen-frontal")
+		video(class="videoContainer", id="frontal" muted)
+			source(id="path_f", src='../../media/#{video.name_frontal}.mp4', type='video/mp4')
+			source(id="", src='../../media/#{video.name_frontal}.ogg', type='video/ogg')
+	div(class="video-analisis", id="margen-lateral")
+		video(class="videoContainer", id="lateral" muted)
+			source(id="path_l", src='../../media/#{video.name_lateral}.mp4', type='video/mp4')
+			source(id="", src='../../media/#{video.name_lateral}.ogg', type='video/ogg')
+	div.row.info-basic-video
+		div.col-xs-6.col-sm-6.reproductor
+			ul.list-inline
+				li
+					a(id="btn-sub")
+						span.glyphicon.glyphicon-backward
+				li.playvideo
+					button.btn.btn-default.btn-sm(type='button', id="btn-play-pause")
+						span.glyphicon.glyphicon-play
+						|  Play
+				li
+					a(id="btn-add")
+						span.glyphicon.glyphicon-forward
+				li
+					div(id="current") 00:00:00:00
+				li
+					div(id="duration") 00:00:00
+
+	button(type="button" class="btn btn-danger" id="video_deleteMatch" ) Delete Videos
+
+
+	//div.template-criteries
+	//div.table-analisis

@@ -1,0 +1,30 @@
+﻿extends ../layout
+block content
+  
+  h2 Championships
+  p
+    a(href="/api/newchampionship") Add new championship
+  -if(championships.length > 0)
+    table.table.table-condensed.list-video
+      thead
+        tr
+          th Name
+          th Nº Teams
+          th Nº Matchs
+          
+      tbody
+        -each item in championships
+          tr(id="row-#{item._id}")
+            td #{item.name}
+            td #{item.numberofteams}
+            td #{item.numberofmatchs}
+           
+            td 
+              a(href="/api/showchampionship/#{item._id}") Show 
+            td
+              a(href="#" id="delete_championship" idCh="#{item._id}" nameC="#{item.name}") Delete
+  -else
+    p No existen campeonatos creados
+
+  p
+    a(href="/") Return

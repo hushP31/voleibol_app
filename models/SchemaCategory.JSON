@@ -1,0 +1,9 @@
+{
+	"name": "category name",
+	"description": "category description",
+	"keyaccess": "key on keyboard. Auto-Numero",
+	
+	"name": {"type": "String", "required": true},
+	"description": {"type": "String", "required": true},
+	"keyaccess": {"type": "Number", "required": false}
+}

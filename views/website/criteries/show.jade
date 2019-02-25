@@ -1,0 +1,70 @@
+﻿extends ../layout
+block content
+	h1(idmongo="#{critery.id}")
+		p(id="name_critery-#{critery.id}") #{critery.name}
+	table.table.table-condensed(id='table-critery')
+		thead(id="CriteryTitle")
+			tr
+				td Pre-Time
+				td Post-Time
+				td Tipo
+				td Criterio Tiempo
+				td Description
+				td
+				td
+		tbody
+			tr(id='row_critery-#{critery.id}')
+
+				td(id='pre_critery-#{critery.id}') 
+					p(id='pre_critery-#{critery.id}') #{critery.pre_time}
+
+				td(id='post_critery-#{critery.id}') 
+					p(id='post_critery-#{critery.id}') #{critery.post_time}
+
+				td(id='tipo_critery-#{critery.id}') 
+					p(id='tipo_critery-#{critery.id}') #{critery.type}
+
+				td(id='post_critery-#{critery.id}') 
+					p(id='time_critery-#{critery.id}') #{critery.time_critery.name}
+
+				td(id='description_critery-#{critery.id}') 
+					p(id='description_critery-#{critery.id}') #{critery.description}
+
+				td 
+					button(type="button", class='btn btn-info btn-lg updatecrtry', id='btn-up-critery', idmongo='#{critery.id}')
+						span.glyphicon.glyphicon-pencil
+						|  Update
+				td 
+					button(type="button", class='btn btn-info deletecrtry', id='btn-dlt-critery', idmongo='#{critery.id}') Delete
+	h3 Categories 
+		button.btn.btn-default(type="submit", id='btn-new-category', value="+") +
+	div.ctgry-in
+	-if(categories.length >= 0)
+		table.table.table-condensed(id='table-category')
+			thead(id="CategoryTitle")
+				tr
+					td Name
+					td Keyaccess
+					td Description
+			tbody
+				-each item in critery.categories
+					tr(id='row_category-#{item.name}')
+						td(id='name_category-#{item.name}') 
+							p #{item.name}
+
+						td(id='key_category-#{item.name}') 
+							p #{item.keyaccess}
+
+						td(id='descrip_category-#{item.name}') 
+							p #{item.description}
+
+						td 
+							button(type="button", class='btn btn-info btn-lg updatectgry', id='btn-update-Categorycritery', category-name='#{item.name}', key='#{item.keyaccess}')
+								span.glyphicon.glyphicon-pencil
+								|  Update
+						td 
+							button(type="button", class='btn btn-info deletectgry', id='btn-delete-Categorycritery') Delete
+	-else
+		p No existen categories creados
+
+	a(href="/api/showcriteries") return

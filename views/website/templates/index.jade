@@ -1,0 +1,71 @@
+﻿extends ../layout
+block content-team
+
+  h2 TEMPLATES
+  div#add-template
+    button.btn.btn-default(type='button', id="btn-add-template") Add Template
+  div#add-new-template.form
+    ul.list-inline(id="name-tmplt")
+      li
+        label(for='name-tmplt') Name:
+        input#name-tmplt.form-control(type='text')
+    label(for='description-tmplt') Description:
+    textarea#description-tmplt.form-control(rows='5')
+    h4(id="error_chars") Criteries
+    ul#critey-tmplt.list-inline
+      -each item in allcriteries
+        li(id="#{item._id}critery-slctr")
+          ul.list-inline()
+            li
+              div.checkbox
+                label
+                  input(type='checkbox', name="critery-char", value='#{item.name}', idmongo="#{item._id}", id="opt-critery")
+                  |  #{item.name}
+            li
+              select.form-control(name="shortcut", id="#{item._id}")
+                -each item in characters
+                  option(value="#{item}") #{item}
+    h4 Descriptors
+    ul#critey-tmplt.list-inline
+      -each item in alldescriptors
+        li(id="#{item._id}critery-slctr")
+          ul.list-inline
+            li
+              div.checkbox
+                label
+                  input(type='checkbox', name="descriptor-t", value='#{item.name}', idmongo="#{item._id}", id="opt-descriptor")
+                  |  #{item.name}
+    ul.list-inline
+      li
+        button#btn-new-template.btn.btn-default(type='button') Add
+      li
+        button#btn-cancel-template.btn.btn-default(type='button') Cancel
+  p
+  -if(templates.length >= 0)
+    table.table.table-condensed.list-video(id='table-templates')
+      thead(id="TagTitle")
+        tr
+          td Name
+          td Description
+          td Criteries
+          td Descriptors
+      tbody
+        -each item in templates_complete
+          tr(id='row_templates-#{item.t._id}')
+            td(id='name_template-#{item.t._id}') #{item.t.name}
+            
+            td(id='name_template-#{item.t._id}') #{item.t.description}
+
+            td(id='name_template-#{item.t._id}') #{item.str_c}
+
+            td(id='name_template-#{item.t._id}') #{item.str_d}
+            
+            td 
+              a(href="javascript:void(0);", class='btn btn-info updatetag', id='btn-update-tmplt', idmongo='#{item.t._id}') Update
+            td 
+              a(href="javascript:void(0);", class='btn btn-info deletetag', id='btn-delete-tmplt', idmongo='#{item.t._id}') Delete
+  -else
+    p No existen tags creados
+
+  p 
+    a(href="/") Return

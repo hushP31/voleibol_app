@@ -1,0 +1,248 @@
+extends ../layout_analisis
+block content
+	div(class="video-analisis", id="margen-frontal" idvideo="#{video._id}" idchampionship="#{video.championship}")
+		div(id="canvas")
+			video(class="videoContainer", id="frontal" muted)
+				source(id="path_f", src='../../../../#{video.championship}/#{video.name_frontal}.mp4', type='video/mp4')
+				source(id="", src='../../../../#{video.championship}/#{video.name_frontal}.ogg', type='video/ogg')
+			canvas(id="svgContainer1", reDraw="OFF", height="500", width="665", position="frontal", draw="ON", p0="#{video.grid.frontal.p0.x},#{video.grid.frontal.p0.y}" p1="#{video.grid.frontal.p1.x},#{video.grid.frontal.p1.y}" p2="#{video.grid.frontal.p2.x},#{video.grid.frontal.p2.y}" p3="#{video.grid.frontal.p3.x},#{video.grid.frontal.p3.y}" desviacionX="#{video.grid.FdesviacionX}" desviacionY="#{video.grid.FdesviacionY}" divH="#{video.grid.divisionesH}" divV="#{video.grid.divisionesV}"
+			colorH="#{video.grid.color_h}" colorV="#{video.grid.color_v}"
+			sizeH="#{video.grid.size_H}" sizeV="#{video.grid.size_V}")
+	div(class="video-analisis", id="margen-lateral")
+		div(id="canvas")
+			video(class="videoContainer", id="lateral" muted)
+				source(id="path_l", src='../../../../#{video.championship}/#{video.name_lateral}.mp4', type='video/mp4')
+				source(id="", src='../../../../#{video.championship}/#{video.name_lateral}.ogg', type='video/ogg')
+			canvas(id="svgContainer2", height="500", width="665", position="lateral", draw="ON", p0="#{video.grid.lateral.p0.x},#{video.grid.lateral.p0.y}" p1="#{video.grid.lateral.p1.x},#{video.grid.lateral.p1.y}" p2="#{video.grid.lateral.p2.x},#{video.grid.lateral.p2.y}" p3="#{video.grid.lateral.p3.x},#{video.grid.lateral.p3.y}" desviacionX="#{video.grid.LdesviacionX}" desviacionY="#{video.grid.LdesviacionY}" divH="#{video.grid.divisionesH}" divV="#{video.grid.divisionesV}"
+			colorH="#{video.grid.color_h}" colorV="#{video.grid.color_v}"
+			sizeH="#{video.grid.size_H}" sizeV="#{video.grid.size_V}")
+	div.row.info-basic-video
+		div.col-xs-6.col-sm-3
+			ul.list-inline
+				li
+					button.btn.btn-default.btn-sm(type='button', id="opt-grid")
+						span.glyphicon.glyphicon-tasks
+						|  Opciones rejilla
+				li
+					button.btn.btn-default.btn-sm(type='button', id="new-analisis")
+						span.glyphicon.glyphicon-tasks
+						|  Nuevo analisis
+				li
+					form
+						label.radio-inline
+							input(type='radio', id="opt-grid-no", name='opt-grid', checked="checked", value="draw", insert="OFF")
+							| Draw
+						label.radio-inline
+							input(type='radio', id="opt-grid-xy", name='opt-grid', value="positionxy", insert="OFF")
+							| Position XY
+						label.radio-inline
+							input(type='radio', id="opt-grid-xyz", name='opt-grid', value="positionxyz", insert="OFF")
+							| Position XYZ
+				li
+					a.export(href='#' id="csv-hidden") to csv
+		div.col-xs-6.col-sm-6.reproductor
+			ul.functions_video
+				li
+					ul.list-inline
+						li
+							a(id="btn-sub")
+								span.glyphicon.glyphicon-backward
+						li.playvideo
+							button.btn.btn-default.btn-sm(type='button', id="btn-play-pause")
+								span.glyphicon.glyphicon-play
+								|  Play
+						li
+							a(id="btn-add")
+								span.glyphicon.glyphicon-forward
+						li
+							div(id="current") 00:00:00:00
+						li
+							div(id="duration") 00:00:00
+						li
+							div(id="sinc")
+								button.btn.btn-primary.btn-sm(type='button', value="Sincroniza", id="btn-sinc") Sincroniza
+						li
+							div(id="trckng")
+								ul.list-inline
+									li
+										p
+											| Tracking:
+									li
+										input(checked="OFF" data-toggle="toggle" type="checkbox" id="trckng")
+		div.col-xs-6.col-sm-3
+			h4.col-xs-6(id="champ_name_1") #{name_championship} 
+			h4.col-xs-6 #{date_championship}
+			p(id="date_match") #{video.date}
+			h4.col-xs-6 
+				p(id="teamA_name", align="left") #{teamA.name}
+			h4.col-xs-6 
+				p(id="teamB_name", align="right") #{teamB.name}
+			ul.list-inline.marcador(id="saque", saqueA="ON", saqueB="ON"  align="center")
+				li
+					button.btn.btn-primary.btn-sm(type='button', value="Rot-A", id="btn-rotationA")
+						p(id="rotA") RA-1
+				li
+					input(type='radio', name='saque', value='saqueA', checked='')
+				li
+					ul.list-group
+						li
+							a(id="add-puntuacionA")
+								span.glyphicon.glyphicon-chevron-up
+						li
+							a(id="sub-puntuacionA")
+								span.glyphicon.glyphicon-chevron-down
+				li(id="puntuacion")
+					ul.list-group
+						li
+							p(id="SetA") 0
+						li
+							p(id="puntosA") 0
+				li(id="puntuacion")
+					ul.list-group
+						li
+							p(id="SetB") 0
+						li
+							p(id="puntosB") 0
+				li
+					ul.list-group
+						li
+							a(id="add-puntuacionB")
+								span.glyphicon.glyphicon-chevron-up
+						li
+							a(id="sub-puntuacionB")
+								span.glyphicon.glyphicon-chevron-down
+				li
+					input(type='radio', name='saque', value='saqueB', checked='')
+				li
+					button.btn.btn-primary.btn-sm(type='button', value="Rot-B", id="btn-rotationB")
+						p(id="rotB") RB-1
+	div.rotation(id="equipoA")
+		h4 Rotacion Equipo A
+		ul.list-group
+			li
+				ul.list-inline
+					li
+						.input-group(id="player")
+							span#basic-addon1.input-group-addon 4
+							input.form-control(type='number', min=0, value='0', aria-describedby='basic-addon1' id="pos4A")
+
+					li
+						.input-group(id="player")
+							span#basic-addon1.input-group-addon 3
+							input.form-control(type='number', min=0, value='0', aria-describedby='basic-addon1',id="pos3A")
+					li
+						.input-group(id="player")
+							span#basic-addon1.input-group-addon 2
+							input.form-control(type='number', min=0, value='0', aria-describedby='basic-addon1',id="pos2A")
+				ul.list-inline
+					li
+						.input-group(id="player")
+							span#basic-addon1.input-group-addon 5
+							input.form-control(type='number', min=0, value='0', aria-describedby='basic-addon1',id="pos5A")
+
+					li
+						.input-group(id="player")
+							span#basic-addon1.input-group-addon 6
+							input.form-control(type='number', min=0, value='0', aria-describedby='basic-addon1',id="pos6A")
+					li
+						.input-group(id="player")
+							span#basic-addon1.input-group-addon 1
+							input.form-control(type='number', min=0, value='0', aria-describedby='basic-addon1',id="pos1A")
+			li
+				ul.list-inline
+					li
+						.input-group(id="libero")
+							span#basic-addon1.input-group-addon Libero
+							input.form-control(type='number', min=0, value='0', aria-describedby='basic-addon1', id="lib1A")
+
+					li
+						.input-group(id="libero")
+							span#basic-addon1.input-group-addon Libero
+							input.form-control(type='number', min=0, value='0', aria-describedby='basic-addon1', id="lib2A")
+
+			li.select-rotation
+				label.radio-inline(id="n-rotation")
+					input(type='radio', name='rotationA', value="1", id="r1A")
+					p R1
+				label.radio-inline(id="n-rotation")
+					input(type='radio', name='rotationA', value="2", id="r2A")
+					p R2
+				label.radio-inline(id="n-rotation")
+					input(type='radio', name='rotationA', value="3", id="r3A")
+					p R3
+				label.radio-inline(id="n-rotation")
+					input(type='radio', name='rotationA', value="4", id="r4A")
+					p R4
+				label.radio-inline(id="n-rotation")
+					input(type='radio', name='rotationA', value="5", id="r5A")
+					p R5
+				label.radio-inline(id="n-rotation")
+					input(type='radio', name='rotationA', value="6", id="r6A")
+					p R6
+		button.btn.btn-primary(type='button', id="btn-rttn-a") Enviar
+	div.rotation(id="equipoB")
+		h4 Rotacion Equipo B
+		ul.list-group
+			li
+				ul.list-inline
+					li
+						.input-group(id="player")
+							span#basic-addon1.input-group-addon 4
+							input.form-control(type='number', min=0, value='0', aria-describedby='basic-addon1' id="pos4B")
+
+					li
+						.input-group(id="player")
+							span#basic-addon1.input-group-addon 3
+							input.form-control(type='number', min=0, value='0', aria-describedby='basic-addon1',id="pos3B")
+					li
+						.input-group(id="player")
+							span#basic-addon1.input-group-addon 2
+							input.form-control(type='number', min=0, value='0', aria-describedby='basic-addon1',id="pos2B")
+				ul.list-inline
+					li
+						.input-group(id="player")
+							span#basic-addon1.input-group-addon 5
+							input.form-control(type='number', min=0, value='0', aria-describedby='basic-addon1',id="pos5B")
+
+					li
+						.input-group(id="player")
+							span#basic-addon1.input-group-addon 6
+							input.form-control(type='number', min=0, value='0', aria-describedby='basic-addon1',id="pos6B")
+					li
+						.input-group(id="player")
+							span#basic-addon1.input-group-addon 1
+							input.form-control(type='number', min=0, value='0', aria-describedby='basic-addon1',id="pos1B")
+			li
+				ul.list-inline
+					li
+						.input-group(id="libero")
+							span#basic-addon1.input-group-addon Libero
+							input.form-control(type='number', min=0, value='0', aria-describedby='basic-addon1', id="lib1B")
+
+					li
+						.input-group(id="libero")
+							span#basic-addon1.input-group-addon Libero
+							input.form-control(type='number', min=0, value='0', aria-describedby='basic-addon1', id="lib2B")
+
+			li.select-rotation
+				label.radio-inline(id="n-rotation")
+					input(type='radio', name='rotationB', value="1", id="r1B")
+					p R1
+				label.radio-inline(id="n-rotation")
+					input(type='radio', name='rotationB', value="2", id="r2B")
+					p R2
+				label.radio-inline(id="n-rotation")
+					input(type='radio', name='rotationB', value="3", id="r3B")
+					p R3
+				label.radio-inline(id="n-rotation")
+					input(type='radio', name='rotationB', value="4", id="r4B")
+					p R4
+				label.radio-inline(id="n-rotation")
+					input(type='radio', name='rotationB', value="5", id="r5B")
+					p R5
+				label.radio-inline(id="n-rotation")
+					input(type='radio', name='rotationB', value="6", id="r6B")
+					p R6
+		button.btn.btn-primary(type='button', id="btn-rttn-b") Enviar
+	//div.template-criteries
+	//div.table-analisis

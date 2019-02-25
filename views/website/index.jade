@@ -1,0 +1,22 @@
+﻿extends layout
+
+block content-video
+	section.centrar-contenido-1
+		ul.list-unstyled.video-list-thumbs.row
+		- each item in videos
+			li.col-lg-3.col-sm-4.col-xs-6.box-video
+				div.relative
+					a(href='/api/showvideo/#{item.idvideo}', title='#{item.name}').match-video
+						video.match(id="#{item.idvideo}")
+							source(src='../../../../#{item.championship}/#{item.path_frontal}.mp4', type='video/mp4')
+							|   
+							source(src='../../../../#{item.championship}/#{item.path_frontal}.ogg', type='video/ogg')
+							|   Your browser does not support the video tag.
+					div.parteam.info-video
+						h1.teams #{item.nameA} vs #{item.nameB}
+					div.championshipmatch.info-video
+						h2.championship #{item.name_champ}
+					div.time.info-video
+						p.duration #{item.duration}
+
+
